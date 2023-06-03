@@ -1,0 +1,12 @@
+{
+  "name": "cypress-api-mark85",
+  "version": "1.0.0",
+  "description": "Projeto de testes de API do gerenciador de tarefas Mark85",
+  "main": "index.js",
+  "repository": "https://github.com/JeanMoreira-Tec/cypress-api-mark85.git",
+  "author": "Jean Moreira <jean.biomedicina@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.13.0"
+  }
+}
