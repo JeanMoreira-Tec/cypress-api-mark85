@@ -11,14 +11,20 @@ describe('POST /user', () => {
 
     cy.task('deleteUser', user.email)
 
-    cy.api({
-      url: '/users',
-      method: 'POST',
-      body: user,
-      failOnStatusCode: false
-    }).then(response => {
-      expect(response.status).to.eq(200)
-      cy.log(JSON.stringify(response.body))
-    })
+    cy.postUser(user)
+      .then(response => {
+        expect(response.status).to.eq(200)
+      })
+
   })
+})
+
+
+Cypress.Commands.add('postUser', (user) => {
+  cy.api({
+    url: '/users',
+    method: 'POST',
+    body: user,
+    failOnStatusCode: false
+  }).then(response => { return response })
 })
